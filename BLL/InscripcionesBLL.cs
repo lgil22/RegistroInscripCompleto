@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using RegistroP.DAL.Scripts;
 using System.Data;
 
+
 namespace RegistroP.BLL
 {
     public class InscripcionesBLL
@@ -23,7 +24,7 @@ namespace RegistroP.BLL
             {
                 if (db.Inscripciones.Add(inscripcion) != null)
                 {
-                    db.Inscripciones.Find(inscripcion.PersonaId).Balance += inscripcion.Monto;
+                    db.Personas.Find(inscripcion.PersonaId).Balance += inscripcion.Monto;
                     paso = db.SaveChanges() > 0;
                 }
 
@@ -40,6 +41,10 @@ namespace RegistroP.BLL
             return paso;
         }
 
+       
+
+
+
         public static bool Modificar(Inscripciones inscripcion)
         {
             bool paso = false;
@@ -51,9 +56,9 @@ namespace RegistroP.BLL
 
                 decimal cambio = inscripcion.Monto - ant.Monto;
 
-                var est = db.Inscripciones.Find(inscripcion.PersonaId);
+                var est = db.Personas.Find(inscripcion.PersonaId);
                 est.Balance += cambio;
-                InscripcionesBLL.Modificar(est);
+                PersonasBLL.Modificar(est);
 
                 db.Entry(inscripcion).State = EntityState.Modified;
                 paso = (db.SaveChanges() > 0);

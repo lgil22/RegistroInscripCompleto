@@ -9,6 +9,8 @@ namespace RegistroP.Entidades
 {
   public class Personas
     {
+        
+
         [Key]
         public int PersonaId { get; set; }
         public string Nombre { get; set; }
@@ -16,6 +18,7 @@ namespace RegistroP.Entidades
         public string Cedula { get; set; }
         public string Direccion { get; set; }
         public DateTime FechaNacimiento { get; set; }
+        public decimal Balance { get; set; }
 
         public Personas()
         {
@@ -25,9 +28,10 @@ namespace RegistroP.Entidades
             Cedula = string.Empty;
             Direccion = string.Empty;
             FechaNacimiento = DateTime.Now;
+            Balance = 0;
         }
 
-        public Personas(int personaid, string nombre, string telefono, string cedula, string direccion, DateTime fechanacimiento)
+        public Personas(int personaid, string nombre, string telefono, string cedula, string direccion, DateTime fechanacimiento, decimal balance)
         {
             PersonaId = personaid;
             Nombre = nombre;
@@ -35,6 +39,7 @@ namespace RegistroP.Entidades
             Cedula = cedula;
             Direccion = direccion;
             FechaNacimiento = fechanacimiento;
+            Balance = balance;
         }
 
     }
