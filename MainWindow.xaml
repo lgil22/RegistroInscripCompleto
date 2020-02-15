@@ -1,0 +1,25 @@
+﻿<Window x:Name="MenuPrincipal" x:Class="RegistroP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroP"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="385" Width="625" WindowStartupLocation="Manual" WindowState="Normal" SizeToContent="Manual" ShowInTaskbar="False" ResizeMode="NoResize" HorizontalAlignment="Left" VerticalAlignment="Stretch" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Menu x:Name="GridMenuPrincipal">
+            <MenuItem Header="Registros" Click="MenuItem_Click">
+                <MenuItem Header="Personas">
+                </MenuItem>
+                
+            </MenuItem>
+            <MenuItem Header="Inscripciones" Click= "MenuItem_Click_2">
+                <MenuItem Header="Personas"/>
+            </MenuItem>
+            <MenuItem Header="Consultas" Click="MenuItem_Click_1">
+                <RibbonMenuItem Header="Personas"/>
+            </MenuItem>
+        </Menu> 
+
+    </Grid>
+</Window>

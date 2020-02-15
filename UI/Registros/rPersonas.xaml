@@ -1,0 +1,33 @@
+﻿<Window x:Class="RegistroP.UI.Registros.rPersonas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroP.UI.Registros"
+        mc:Ignorable="d"
+        Title="rPersonas" Height="350" Width="385">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="IdLabel" Content="ID" HorizontalAlignment="Left" Margin="36,32,0,0" VerticalAlignment="Top" Height="26" Width="22"/>
+        <Label x:Name="NombreLabel" Content="Nombre" HorizontalAlignment="Left" Margin="36,63,0,0" VerticalAlignment="Top" Height="26" Width="54"/>
+        <Label x:Name="TelefonoLabel" Content="Telefono" HorizontalAlignment="Left" Margin="36,94,0,0" VerticalAlignment="Top" Height="26" Width="55" RenderTransformOrigin="0.509,2.309"/>
+        <Label x:Name="CedulaLabel" Content="Cedula" HorizontalAlignment="Left" Margin="36,125,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.751,0.714" Height="26" Width="46"/>
+        <Label x:Name="DireccionLabel" Content="Direccion" HorizontalAlignment="Left" Margin="36,156,0,0" VerticalAlignment="Top" Height="26" Width="60" RenderTransformOrigin="0.5,1.386"/>
+        <Label x:Name="FechaNacLabel" Content="Fecha Nacimiento" HorizontalAlignment="Left" Margin="36,187,0,0" VerticalAlignment="Top" Height="26" Width="105"/>
+        <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="137,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" TextChanged="idTextBox_TextChanged" Text="0"/>
+        <TextBox x:Name="NombreTextBox" HorizontalAlignment="Left" Margin="137,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" TextChanged="NombreTextBox_TextChanged"/>
+        <TextBox x:Name="TelefonoTextBox" HorizontalAlignment="Left" Margin="137,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18" TextChanged="TelefonoTextBox_TextChanged"/>
+        <TextBox x:Name="CedulaTextBox" HorizontalAlignment="Left" Margin="137,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <TextBox x:Name="DireccionTextBox" HorizontalAlignment="Left" Margin="137,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="18"/>
+        <DatePicker x:Name="FechaNacDatePicker" HorizontalAlignment="Left" Margin="155,189,0,0" VerticalAlignment="Top" SelectedDateFormat="Short" DisplayDate="2020-02-06" Height="24" Width="102"/>
+        <Button x:Name="BuscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="311,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="-4.519,0.378" Height="20" Width="45" Click="BuscarButton_Click"/>
+        <Button x:Name="NuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="69,284,0,0" VerticalAlignment="Top" Click="NuevoButton_Click"/>
+        <Button x:Name="GuardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="192,284,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.623,0.453" Click="GuardarButton_Click"/>
+        <Button x:Name="EliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="310,284,0,0" VerticalAlignment="Top" Height="20" Click="EliminarButton_Click"/>
+
+    </Grid>
+</Window>
