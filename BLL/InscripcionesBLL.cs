@@ -75,7 +75,7 @@ namespace RegistroP.BLL
         }
 
         //Este es el metodo para eliminar en la base de datos
-        public static bool Eliminar(int id)
+        public static bool Eliminar(int id, int v)
         {
             bool paso = false;
             Contexto db = new Contexto();
